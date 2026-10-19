@@ -23,3 +23,5 @@ _Not yet known._
 ## Cloud session network (not invideo)
 - Drive downloads need `drive.google.com` + `drive.usercontent.google.com` allowed. Takes effect without a new session.
 - Hugging Face model downloads also need `*.hf.co` (files come from `us.aws.cdn.hf.co` / `cas-server.xethub.hf.co`).
+- HyperFrames renders locally: `cdn.jsdelivr.net` is blocked, so GSAP and fonts are vendored into each project's `assets/`. Chrome headless shell comes from `npx hyperframes browser ensure` (works).
+- faster-whisper: newer PyAV breaks its decoder; feed a 16 kHz wav (scripts/transcribe.py does this).

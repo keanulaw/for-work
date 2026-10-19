@@ -129,8 +129,10 @@ def main(plan_path):
     caps = []
 
     def add(start, end, html, pos):
-        if end - start >= 1 / FPS:
-            caps.append((round(start, 4), round(end - start, 4), html, pos))
+        # snap to whole frames and end just short of the next state, so two never share a frame
+        f0, f1 = round(start * FPS), round(end * FPS)
+        if f1 > f0:
+            caps.append((round(f0 / FPS, 4), round((f1 - f0) / FPS - 0.002, 4), html, pos))
 
     def span(w, cls):
         return f'<span class="{cls}">{w}</span>'
