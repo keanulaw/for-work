@@ -1,0 +1,33 @@
+# Video
+*.mp4
+*.mov
+*.mkv
+*.MP4
+*.MOV
+*.MKV
+
+# Audio
+*.wav
+*.mp3
+*.WAV
+*.MP3
+
+# Images
+*.png
+*.jpg
+*.PNG
+*.JPG
+
+# DaVinci Resolve exports
+*.drp
+*.drt
+
+# Footage and export folders
+/media/
+/exports/
+/export/
+/renders/
+
+# OS
+.DS_Store
+Thumbs.db
