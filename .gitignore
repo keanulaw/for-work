@@ -31,3 +31,10 @@
 # OS
 .DS_Store
 Thumbs.db
+
+# HyperFrames renders and pre-cut clips
+hyperframes/*/renders/
+hyperframes/*/assets/clips/
+hyperframes/*/assets/*.wav
+hyperframes/*/.hyperframes/
+hyperframes/*/node_modules/

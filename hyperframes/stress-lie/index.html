@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Mont"; src: url("assets/montserrat-latin-900-normal.woff2") format("woff2"); font-weight: 900; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #000; }
+.clip { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+video.full { object-fit: cover; transform-origin: 50% 40%; }
+video.card { left: 54px; top: 115px; width: 972px; height: 1690px; object-fit: cover; border-radius: 44px; }
+.torn path { fill: #000; }
+.ink { z-index: 50; overflow: visible; }
+.ink path { fill: #E3170A; }
+.vignette { z-index: 40; background: radial-gradient(ellipse 75% 62% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 85%, rgba(0,0,0,.85) 100%); }
+.cap { z-index: 60; display: flex; justify-content: center; align-items: center; }
+.cap.chest { align-items: flex-start; padding-top: 1080px; }
+.capin { text-align: center; font-family: "Mont", sans-serif; font-weight: 900; text-transform: uppercase;
+  letter-spacing: -0.035em; line-height: 0.95; filter: drop-shadow(0 6px 14px rgba(0,0,0,.65)); max-width: 960px; }
+.capin .line { display: block; }
+.w { color: #fff; }
+.o { background: linear-gradient(180deg,#FFC229 0%,#FF7A00 55%,#FF5A00 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sm { font-size: 64px; } .md { font-size: 92px; } .lg { font-size: 140px; } .big { font-size: 150px; }
+.bg { z-index: 0; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="28.1333" data-width="1080" data-height="1920">
+<video id="v00" class="clip full" src="assets/clips/c00.mp4" data-start="0.0" data-duration="1.4666666666666666" data-media-start="0" muted playsinline style="transform:scale(1.3) translate(0px,0px)"></video>
+<div id="bg01" class="clip bg" data-start="1.4667" data-duration="1.5333333333333334" style="background:#E3170A"></div>
+<video id="v01" class="clip card" src="assets/clips/c01.mp4" data-start="1.4667" data-duration="1.5333333333333334" data-media-start="0" muted playsinline style="object-view-box:inset(6.52% 6.52% 6.52% 6.52%)"></video>
+<svg id="torn01" class="clip torn" data-start="1.4667" data-duration="1.5333333333333334" viewBox="0 0 1080 1920"><path d="M0,0 L526,3 L504,13 L486,24 L462,33 L431,36 L424,54 L416,72 L413,92 L389,101 L373,113 L361,129 L337,137 L309,142 L274,144 L266,161 L254,177 L242,191 L225,204 L214,219 L211,240 L183,246 L156,252 L125,256 L113,271 L95,283 L72,291 L62,307 L55,326 L55,348 L28,355 L6,363 L0,360Z"/><path d="M1080,1920 L574,1928 L569,1903 L583,1889 L600,1877 L626,1870 L641,1857 L660,1845 L694,1844 L715,1834 L731,1821 L729,1797 L746,1785 L762,1772 L774,1757 L787,1743 L806,1732 L846,1733 L866,1723 L884,1711 L893,1694 L912,1683 L928,1671 L928,1648 L942,1634 L961,1623 L998,1623 L1016,1611 L1034,1600 L1057,1591 L1078,1581 L1094,1568 L1080,1560Z"/></svg>
+<video id="v02" class="clip full" src="assets/clips/c02.mp4" data-start="3.0" data-duration="2.3666666666666667" data-media-start="0" muted playsinline style="transform:scale(1.0) translate(0px,0px)"></video>
+<video id="v03" class="clip full" src="assets/clips/c03.mp4" data-start="5.3667" data-duration="0.9666666666666667" data-media-start="0" muted playsinline style="transform:scale(1.28) translate(0px,0px)"></video>
+<video id="v04" class="clip full" src="assets/clips/c04.mp4" data-start="6.3333" data-duration="2.4" data-media-start="0" muted playsinline style="transform:scale(1.0) translate(0px,0px)"></video>
+<video id="v05" class="clip full" src="assets/clips/c05.mp4" data-start="8.7333" data-duration="1.5666666666666667" data-media-start="0" muted playsinline style="transform:scale(1.25) translate(0px,50px)"></video>
+<div id="bg06" class="clip bg" data-start="10.3" data-duration="1.2" style="background:#000"></div>
+<video id="v06" class="clip card" src="assets/clips/c06.mp4" data-start="10.3" data-duration="1.2" data-media-start="0" muted playsinline style="object-view-box:inset(0.00% 0.00% 0.00% 0.00%)"></video>
+<video id="v07" class="clip full" src="assets/clips/c07.mp4" data-start="11.5" data-duration="2.2666666666666666" data-media-start="0" muted playsinline style="transform:scale(1.0) translate(0px,0px)"></video>
+<video id="v08" class="clip full" src="assets/clips/c08.mp4" data-start="13.7667" data-duration="2.533333333333333" data-media-start="0" muted playsinline style="transform:scale(1.0) translate(0px,0px)"></video>
+<video id="v09" class="clip full" src="assets/clips/c09.mp4" data-start="16.3" data-duration="1.8" data-media-start="0" muted playsinline style="transform:scale(1.25) translate(0px,0px)"></video>
+<video id="v10" class="clip full" src="assets/clips/c10.mp4" data-start="18.1" data-duration="1.3333333333333333" data-media-start="0" muted playsinline style="transform:scale(1.1) translate(0px,0px)"></video>
+<div id="bg11" class="clip bg" data-start="19.4333" data-duration="3.3333333333333335" style="background:#E3170A"></div>
+<video id="v11" class="clip card" src="assets/clips/c11.mp4" data-start="19.4333" data-duration="3.3333333333333335" data-media-start="0" muted playsinline style="object-view-box:inset(0.00% 0.00% 0.00% 0.00%)"></video>
+<svg id="torn11" class="clip torn" data-start="19.4333" data-duration="3.3333333333333335" viewBox="0 0 1080 1920"><path d="M0,0 L526,3 L504,13 L486,24 L462,33 L431,36 L424,54 L416,72 L413,92 L389,101 L373,113 L361,129 L337,137 L309,142 L274,144 L266,161 L254,177 L242,191 L225,204 L214,219 L211,240 L183,246 L156,252 L125,256 L113,271 L95,283 L72,291 L62,307 L55,326 L55,348 L28,355 L6,363 L0,360Z"/><path d="M1080,1920 L574,1928 L569,1903 L583,1889 L600,1877 L626,1870 L641,1857 L660,1845 L694,1844 L715,1834 L731,1821 L729,1797 L746,1785 L762,1772 L774,1757 L787,1743 L806,1732 L846,1733 L866,1723 L884,1711 L893,1694 L912,1683 L928,1671 L928,1648 L942,1634 L961,1623 L998,1623 L1016,1611 L1034,1600 L1057,1591 L1078,1581 L1094,1568 L1080,1560Z"/></svg>
+<div id="bg12" class="clip bg" data-start="22.7667" data-duration="3.2333333333333334" style="background:#E3170A"></div>
+<video id="v12" class="clip card" src="assets/clips/c12.mp4" data-start="22.7667" data-duration="3.2333333333333334" data-media-start="0" muted playsinline style="object-view-box:inset(10.00% 10.00% 10.00% 10.00%)"></video>
+<svg id="torn12" class="clip torn" data-start="22.7667" data-duration="3.2333333333333334" viewBox="0 0 1080 1920"><path d="M0,0 L526,3 L504,13 L486,24 L462,33 L431,36 L424,54 L416,72 L413,92 L389,101 L373,113 L361,129 L337,137 L309,142 L274,144 L266,161 L254,177 L242,191 L225,204 L214,219 L211,240 L183,246 L156,252 L125,256 L113,271 L95,283 L72,291 L62,307 L55,326 L55,348 L28,355 L6,363 L0,360Z"/><path d="M1080,1920 L574,1928 L569,1903 L583,1889 L600,1877 L626,1870 L641,1857 L660,1845 L694,1844 L715,1834 L731,1821 L729,1797 L746,1785 L762,1772 L774,1757 L787,1743 L806,1732 L846,1733 L866,1723 L884,1711 L893,1694 L912,1683 L928,1671 L928,1648 L942,1634 L961,1623 L998,1623 L1016,1611 L1034,1600 L1057,1591 L1078,1581 L1094,1568 L1080,1560Z"/></svg>
+<video id="v13" class="clip full" src="assets/clips/c13.mp4" data-start="26.0" data-duration="1.2333333333333334" data-media-start="0" muted playsinline style="transform:scale(1.0) translate(0px,0px)"></video>
+<video id="v14" class="clip full" src="assets/clips/c14.mp4" data-start="27.2333" data-duration="0.9" data-media-start="0" muted playsinline style="transform:scale(1.38) translate(0px,0px)"></video>
+<svg id="ink01" class="clip ink" data-start="1.3667" data-duration="0.2" viewBox="-540.0 -960.0 1080 1920"><g class="band"><path d="M-1965,-60 L-1927,-30 L-1894,4 L-1852,29 L-1811,56 L-1778,90 L-1747,127 L-1708,155 L-1657,172 L-1612,194 L-1576,226 L-1553,270 L-1522,307 L-1498,350 L-1472,392 L-1457,444 L-1426,481 L-1391,514 L-1346,536 L-1320,577 L-1290,615 L-1265,657 L-1222,682 L-1188,715 L-1148,743 L-1111,773 L-1056,786 L-1009,806 L-968,833 L-945,878 L-917,917 L-887,954 L-853,988 L-828,1030 L-800,1070 L-766,1104 L-730,1135 L-702,1174 L-685,1225 L-662,1270 L-631,1306 L-586,1329 L-549,1359 L-507,1384 L-465,1410 L-412,1425 L-376,1456 L-343,1490 L-321,1536 L-279,1562 L-242,1592 L-200,1617 L-175,1660 L-141,1694 L-114,1734 L-83,1771 L-71,1826 L-50,1873 L-24,1914 L21,1937 L60,1965 L1958,67 L1921,37 L1886,4 L1843,-20 L1814,-59 L1777,-90 L1739,-119 L1683,-131 L1642,-157 L1607,-190 L1590,-240 L1561,-278 L1539,-324 L1513,-365 L1496,-416 L1461,-448 L1422,-477 L1378,-501 L1352,-542 L1326,-584 L1298,-623 L1258,-651 L1219,-679 L1179,-707 L1135,-730 L1084,-747 L1034,-764 L1002,-800 L979,-844 L958,-890 L923,-923 L893,-961 L861,-996 L836,-1039 L797,-1067 L767,-1104 L737,-1142 L726,-1199 L699,-1239 L667,-1275 L617,-1292 L578,-1321 L532,-1342 L492,-1369 L441,-1386 L408,-1421 L379,-1459 L356,-1503 L315,-1530 L273,-1556 L233,-1583 L206,-1624 L178,-1663 L150,-1702 L126,-1746 L110,-1798 L92,-1847 L57,-1879 L13,-1903 L-34,-1924 L-67,-1958Z"/></g></svg>
+<svg id="ink11" class="clip ink" data-start="19.3333" data-duration="0.2" viewBox="-540.0 -960.0 1080 1920"><g class="band"><path d="M-1965,-60 L-1927,-30 L-1894,4 L-1852,29 L-1811,56 L-1778,90 L-1747,127 L-1708,155 L-1657,172 L-1612,194 L-1576,226 L-1553,270 L-1522,307 L-1498,350 L-1472,392 L-1457,444 L-1426,481 L-1391,514 L-1346,536 L-1320,577 L-1290,615 L-1265,657 L-1222,682 L-1188,715 L-1148,743 L-1111,773 L-1056,786 L-1009,806 L-968,833 L-945,878 L-917,917 L-887,954 L-853,988 L-828,1030 L-800,1070 L-766,1104 L-730,1135 L-702,1174 L-685,1225 L-662,1270 L-631,1306 L-586,1329 L-549,1359 L-507,1384 L-465,1410 L-412,1425 L-376,1456 L-343,1490 L-321,1536 L-279,1562 L-242,1592 L-200,1617 L-175,1660 L-141,1694 L-114,1734 L-83,1771 L-71,1826 L-50,1873 L-24,1914 L21,1937 L60,1965 L1958,67 L1921,37 L1886,4 L1843,-20 L1814,-59 L1777,-90 L1739,-119 L1683,-131 L1642,-157 L1607,-190 L1590,-240 L1561,-278 L1539,-324 L1513,-365 L1496,-416 L1461,-448 L1422,-477 L1378,-501 L1352,-542 L1326,-584 L1298,-623 L1258,-651 L1219,-679 L1179,-707 L1135,-730 L1084,-747 L1034,-764 L1002,-800 L979,-844 L958,-890 L923,-923 L893,-961 L861,-996 L836,-1039 L797,-1067 L767,-1104 L737,-1142 L726,-1199 L699,-1239 L667,-1275 L617,-1292 L578,-1321 L532,-1342 L492,-1369 L441,-1386 L408,-1421 L379,-1459 L356,-1503 L315,-1530 L273,-1556 L233,-1583 L206,-1624 L178,-1663 L150,-1702 L126,-1746 L110,-1798 L92,-1847 L57,-1879 L13,-1903 L-34,-1924 L-67,-1958Z"/></g></svg>
+<div id="vignette" class="clip vignette" data-start="0" data-duration="28.1333"></div>
+<div id="cap000" class="clip cap chest" data-start="0.06" data-duration="0.14"><div class="capin"><span class="big o">YOUR</span></div></div>
+<div id="cap001" class="clip cap chest" data-start="0.2" data-duration="0.24"><div class="capin"><span class="big o">HEART</span></div></div>
+<div id="cap002" class="clip cap chest" data-start="0.44" data-duration="0.26"><div class="capin"><span class="big o">ISN'T</span></div></div>
+<div id="cap003" class="clip cap chest" data-start="0.7" data-duration="0.32"><div class="capin"><span class="big o">ACTUALLY</span></div></div>
+<div id="cap004" class="clip cap chest" data-start="1.02" data-duration="0.1"><div class="capin"><span class="big o">A</span></div></div>
+<div id="cap005" class="clip cap chest" data-start="1.12" data-duration="0.3467"><div class="capin"><span class="big o">MUSCLE</span></div></div>
+<div id="cap006" class="clip cap chest" data-start="1.5267" data-duration="0.14"><div class="capin"><span class="big o">IT'S</span></div></div>
+<div id="cap007" class="clip cap chest" data-start="1.6667" data-duration="0.56"><div class="capin"><span class="big o">60%</span></div></div>
+<div id="cap008" class="clip cap chest" data-start="2.2267" data-duration="0.24"><div class="capin"><span class="big o">NERVE</span></div></div>
+<div id="cap009" class="clip cap chest" data-start="2.4667" data-duration="0.5333"><div class="capin"><span class="big o">FIBER</span></div></div>
+<div id="cap010" class="clip cap chest" data-start="3.08" data-duration="0.18"><div class="capin"><span class="md w">NOW</span></div></div>
+<div id="cap011" class="clip cap chest" data-start="3.26" data-duration="0.18"><div class="capin"><span class="md w">NOW SOME</span></div></div>
+<div id="cap012" class="clip cap chest" data-start="3.44" data-duration="0.24"><div class="capin"><span class="md w">NOW SOME PEOPLE</span></div></div>
+<div id="cap013" class="clip cap chest" data-start="3.68" data-duration="0.38"><div class="capin"><span class="md w">DON'T</span></div></div>
+<div id="cap014" class="clip cap chest" data-start="4.06" data-duration="0.36"><div class="capin"><span class="md w">DON'T FEEL</span></div></div>
+<div id="cap015" class="clip cap chest" data-start="4.42" data-duration="0.42"><div class="capin"><span class="md w">DON'T FEEL THE</span></div></div>
+<div id="cap016" class="clip cap chest" data-start="4.84" data-duration="0.5267"><div class="capin"><span class="big o">COMPRESSION</span></div></div>
+<div id="cap017" class="clip cap chest" data-start="5.4267" data-duration="0.06"><div class="capin"><span class="md w">SO</span></div></div>
+<div id="cap018" class="clip cap chest" data-start="5.4867" data-duration="0.18"><div class="capin"><span class="md w">SO SOME</span></div></div>
+<div id="cap019" class="clip cap chest" data-start="5.6667" data-duration="0.22"><div class="capin"><span class="md w">SO SOME PEOPLE</span></div></div>
+<div id="cap020" class="clip cap chest" data-start="5.8867" data-duration="0.14"><div class="capin"><span class="md w">WILL</span></div></div>
+<div id="cap021" class="clip cap chest" data-start="6.0267" data-duration="0.14"><div class="capin"><span class="md w">WILL BE</span></div></div>
+<div id="cap022" class="clip cap chest" data-start="6.1667" data-duration="0.1667"><div class="capin"><span class="md w">WILL BE LIKE</span></div></div>
+<div id="cap023" class="clip cap chest" data-start="6.3333" data-duration="0.14"><div class="capin"><span class="md w">WELL</span></div></div>
+<div id="cap024" class="clip cap chest" data-start="6.4733" data-duration="0.16"><div class="capin"><span class="md w">WELL I</span></div></div>
+<div id="cap025" class="clip cap chest" data-start="6.6333" data-duration="0.24"><div class="capin"><span class="md w">WELL I DON'T</span></div></div>
+<div id="cap026" class="clip cap chest" data-start="6.8733" data-duration="0.16"><div class="capin"><span class="md w">FEEL</span></div></div>
+<div id="cap027" class="clip cap chest" data-start="7.0333" data-duration="0.26"><div class="capin"><span class="md w">FEEL ANY</span></div></div>
+<div id="cap028" class="clip cap chest" data-start="7.2933" data-duration="0.62"><div class="capin"><span class="big o">ANXIETY</span></div></div>
+<div id="cap029" class="clip cap chest" data-start="7.9133" data-duration="0.26"><div class="capin"><span class="md w">OR</span></div></div>
+<div id="cap030" class="clip cap chest" data-start="8.1733" data-duration="0.56"><div class="capin"><span class="md w">OR STRESS</span></div></div>
+<div id="cap031" class="clip cap chest" data-start="8.7933" data-duration="0.24"><div class="capin"><span class="md w">BUT</span></div></div>
+<div id="cap032" class="clip cap chest" data-start="9.0333" data-duration="0.14"><div class="capin"><span class="md w">BUT THEY'RE</span></div></div>
+<div id="cap033" class="clip cap chest" data-start="9.1733" data-duration="0.2"><div class="capin"><span class="md w">BUT THEY'RE ALWAYS</span></div></div>
+<div id="cap034" class="clip cap chest" data-start="9.3733" data-duration="0.18"><div class="capin"><span class="md w">IN</span></div></div>
+<div id="cap035" class="clip cap chest" data-start="9.5533" data-duration="0.14"><div class="capin"><span class="md w">IN THEIR</span></div></div>
+<div id="cap036" class="clip cap chest" data-start="9.6933" data-duration="0.34"><div class="capin"><span class="big o">HEAD</span></div></div>
+<div id="cap037" class="clip cap chest" data-start="10.0333" data-duration="0.2667"><div class="capin"><span class="md w">RIGHT</span></div></div>
+<div id="cap038" class="clip cap chest" data-start="10.36" data-duration="0.3"><div class="capin"><span class="md w">THOSE</span></div></div>
+<div id="cap039" class="clip cap chest" data-start="10.66" data-duration="0.2"><div class="capin"><span class="md w">THOSE ARE</span></div></div>
+<div id="cap040" class="clip cap chest" data-start="10.86" data-duration="0.16"><div class="capin"><span class="md w">THOSE ARE THE</span></div></div>
+<div id="cap041" class="clip cap chest" data-start="11.02" data-duration="0.48"><div class="capin"><span class="md w">PEOPLE</span></div></div>
+<div id="cap042" class="clip cap mid" data-start="11.56" data-duration="0.12"><div class="capin"><span class="md w">AND</span></div></div>
+<div id="cap043" class="clip cap mid" data-start="11.68" data-duration="0.12"><div class="capin"><span class="md w">AND A</span></div></div>
+<div id="cap044" class="clip cap mid" data-start="11.8" data-duration="0.2"><div class="capin"><span class="md w">AND A LOT</span></div></div>
+<div id="cap045" class="clip cap mid" data-start="12.0" data-duration="0.14"><div class="capin"><span class="md w">OF</span></div></div>
+<div id="cap046" class="clip cap mid" data-start="12.14" data-duration="0.12"><div class="capin"><span class="md w">OF THEM</span></div></div>
+<div id="cap047" class="clip cap mid" data-start="12.26" data-duration="0.24"><div class="capin"><span class="md w">OF THEM ARE</span></div></div>
+<div id="cap048" class="clip cap mid" data-start="12.5" data-duration="0.38"><div class="capin"><span class="md w">REALLY</span></div></div>
+<div id="cap049" class="clip cap mid" data-start="12.88" data-duration="0.38"><div class="capin"><span class="big o">FIT</span></div></div>
+<div id="cap050" class="clip cap mid" data-start="13.26" data-duration="0.5067"><div class="capin"><span class="md w">PEOPLE</span></div></div>
+<div id="cap051" class="clip cap mid" data-start="13.7667" data-duration="0.54"><div class="capin"><span class="md w">WHO</span></div></div>
+<div id="cap052" class="clip cap mid" data-start="14.3067" data-duration="0.2"><div class="capin"><span class="md w">WHO CAN</span></div></div>
+<div id="cap053" class="clip cap mid" data-start="14.5067" data-duration="0.48"><div class="capin"><span class="md w">WHO CAN PUSH</span></div></div>
+<div id="cap054" class="clip cap mid" data-start="14.9867" data-duration="0.48"><div class="capin"><span class="md w">THROUGH</span></div></div>
+<div id="cap055" class="clip cap mid" data-start="15.4667" data-duration="0.16"><div class="capin"><span class="md w">THROUGH THEIR</span></div></div>
+<div id="cap056" class="clip cap mid" data-start="15.6267" data-duration="0.26"><div class="capin"><span class="md w">THROUGH THEIR HARD</span></div></div>
+<div id="cap057" class="clip cap mid" data-start="15.8867" data-duration="0.4133"><div class="capin"><span class="md w">DRIVERS</span></div></div>
+<div id="cap058" class="clip cap chest" data-start="16.36" data-duration="0.12"><div class="capin"><span class="md w">STRESS</span></div></div>
+<div id="cap059" class="clip cap chest" data-start="16.48" data-duration="0.36"><div class="capin"><span class="md w">STRESS DOESN'T</span></div></div>
+<div id="cap060" class="clip cap chest" data-start="16.84" data-duration="0.2"><div class="capin"><span class="md w">STRESS DOESN'T BOTHER</span></div></div>
+<div id="cap061" class="clip cap chest" data-start="17.04" data-duration="0.24"><div class="capin"><span class="md w">ME</span></div></div>
+<div id="cap062" class="clip cap chest" data-start="17.28" data-duration="0.18"><div class="capin"><span class="md w">ME I'M</span></div></div>
+<div id="cap063" class="clip cap chest" data-start="17.46" data-duration="0.18"><div class="capin"><span class="md w">ME I'M NOT</span></div></div>
+<div id="cap064" class="clip cap chest" data-start="17.64" data-duration="0.46"><div class="capin"><span class="big o">ANXIOUS</span></div></div>
+<div id="cap065" class="clip cap mid" data-start="18.96" data-duration="0.1"><div class="capin"><span class="big o">HEART</span></div></div>
+<div id="cap066" class="clip cap mid" data-start="19.06" data-duration="0.3733"><div class="capin"><span class="big o">ATTACK</span></div></div>
+<div id="cap067" class="clip cap chest" data-start="19.4933" data-duration="0.56"><div class="capin"><span class="md w">BECAUSE</span></div></div>
+<div id="cap068" class="clip cap chest" data-start="20.0533" data-duration="0.2"><div class="capin"><span class="md w">BECAUSE WHAT</span></div></div>
+<div id="cap069" class="clip cap chest" data-start="20.2533" data-duration="0.48"><div class="capin"><span class="md w">BECAUSE WHAT HAPPENS</span></div></div>
+<div id="cap070" class="clip cap chest" data-start="20.7333" data-duration="0.54"><div class="capin"><span class="md w">IS</span></div></div>
+<div id="cap071" class="clip cap chest" data-start="21.2733" data-duration="0.16"><div class="capin"><span class="md w">IS WHETHER</span></div></div>
+<div id="cap072" class="clip cap chest" data-start="21.4333" data-duration="0.3"><div class="capin"><span class="md w">IS WHETHER YOU</span></div></div>
+<div id="cap073" class="clip cap chest" data-start="21.7333" data-duration="0.28"><div class="capin"><span class="md w">ADMIT</span></div></div>
+<div id="cap074" class="clip cap chest" data-start="22.0133" data-duration="0.2"><div class="capin"><span class="md w">ADMIT IT</span></div></div>
+<div id="cap075" class="clip cap chest" data-start="22.2133" data-duration="0.08"><div class="capin"><span class="md w">ADMIT IT OR</span></div></div>
+<div id="cap076" class="clip cap chest" data-start="22.2933" data-duration="0.4733"><div class="capin"><span class="md w">NOT</span></div></div>
+<div id="cap077" class="clip cap mid" data-start="22.8267" data-duration="0.18"><div class="capin"><div class="line"><span class="sm w">YOUR</span></div></div></div>
+<div id="cap078" class="clip cap mid" data-start="23.0067" data-duration="0.48"><div class="capin"><div class="line"><span class="sm w">YOUR BODY'S</span></div></div></div>
+<div id="cap079" class="clip cap mid" data-start="23.4867" data-duration="0.28"><div class="capin"><div class="line"><span class="sm w">YOUR BODY'S</span></div><div class="line"><span class="lg w">NERVOUS</span></div></div></div>
+<div id="cap080" class="clip cap mid" data-start="23.7667" data-duration="0.66"><div class="capin"><div class="line"><span class="sm w">YOUR BODY'S</span></div><div class="line"><span class="lg w">NERVOUS SYSTEM</span></div></div></div>
+<div id="cap081" class="clip cap mid" data-start="24.4267" data-duration="0.82"><div class="capin"><div class="line"><span class="sm w">YOUR BODY'S</span></div><div class="line"><span class="lg w">NERVOUS SYSTEM</span></div><div class="line"><span class="md o">IS</span></div></div></div>
+<div id="cap082" class="clip cap mid" data-start="25.2467" data-duration="0.7533"><div class="capin"><div class="line"><span class="sm w">YOUR BODY'S</span></div><div class="line"><span class="lg w">NERVOUS SYSTEM</span></div><div class="line"><span class="md o">IS COMPRESSING</span></div></div></div>
+<div id="cap083" class="clip cap chest" data-start="26.06" data-duration="0.04"><div class="capin"><span class="md w">AND</span></div></div>
+<div id="cap084" class="clip cap chest" data-start="26.1" data-duration="0.18"><div class="capin"><span class="md w">AND GUESS</span></div></div>
+<div id="cap085" class="clip cap chest" data-start="26.28" data-duration="0.16"><div class="capin"><span class="md w">AND GUESS WHAT</span></div></div>
+<div id="cap086" class="clip cap chest" data-start="26.44" data-duration="0.12"><div class="capin"><span class="md w">YOUR</span></div></div>
+<div id="cap087" class="clip cap chest" data-start="26.56" data-duration="0.22"><div class="capin"><span class="big o">HEART</span></div></div>
+<div id="cap088" class="clip cap chest" data-start="26.78" data-duration="0.4533"><div class="capin"><span class="md w">IS</span></div></div>
+<div id="cap089" class="clip cap chest" data-start="27.2933" data-duration="0.24"><div class="capin"><span class="md w">IT'S</span></div></div>
+<div id="cap090" class="clip cap chest" data-start="27.5333" data-duration="0.06"><div class="capin"><span class="md w">IT'S A</span></div></div>
+<div id="cap091" class="clip cap chest" data-start="27.5933" data-duration="0.54"><div class="capin"><span class="big o">NERVE</span></div></div>
+<audio id="voice" src="assets/voice.wav" data-start="0" data-duration="28.1333" data-has-audio="true"></audio>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#ink01 .band",{x:1791,y:-1791},{x:-1791,y:1791,duration:0.2000,ease:"none"},1.3667);
+tl.fromTo("#ink11 .band",{x:1791,y:-1791},{x:-1791,y:1791,duration:0.2000,ease:"none"},19.3333);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>
