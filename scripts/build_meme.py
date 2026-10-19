@@ -35,6 +35,9 @@ def main(plan_path):
     astream = plan.get("audio_stream", 0)
     cdir = os.path.join(proj, "assets", "clips")
     os.makedirs(cdir, exist_ok=True)
+    emoji_font = os.path.join(proj, "assets", "NotoColorEmoji.ttf")  # 10 MB, git-ignored
+    if not os.path.exists(emoji_font):
+        sh("cp", "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf", emoji_font)
 
     t, items, a_inputs, a_filters, sfx_events = 0.0, [], [], [], []
 
