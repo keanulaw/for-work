@@ -16,4 +16,4 @@ _Not yet known._
 ### Captions
 
 ## Known bugs
-- 2026-10-19: media_grab / media_filmstrip return frame URLs on `s3-pro-uploads.invideo.io`, which this cloud session's network blocks. Only `read` on a sequence shows an image (a small 3x3 sheet). Allow that host to see full frames.
+- 2026-10-19: media_grab / media_filmstrip return frame URLs on `s3-pro-uploads.invideo.io`, which this cloud session's network blocks. Only `read` on a sequence shows an image (a small 3x3 sheet). Workaround: put the clip on a scratch timeline and use `capture` (returns full frames inline, up to 12 per call).
