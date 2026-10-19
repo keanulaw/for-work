@@ -23,6 +23,7 @@ I'm on Claude Pro with limited usage.
 - No AI generation (b-roll, images, music, voice) unless the brief asks for it. It may use invideo credits.
 - One export per version.
 - If a tool call fails, retry once, then stop and report.
+- If something is blocked (network, missing access), look for another route first (e.g. a different invideo tool) before asking me. Check `notes/` for known workarounds.
 
 ## Workflow
 1. Brief: read `briefs/<name>.md`.
