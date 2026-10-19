@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1920, height=1080" />
+<script src="assets/gsap.min.js"></script>
+<style>
+@font-face { font-family: "Anton"; src: url("assets/anton-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Emoji"; src: url("assets/NotoColorEmoji.ttf") format("truetype"); }
+@font-face { font-family: "Mont"; src: url("assets/montserrat-latin-900-normal.woff2") format("woff2"); font-weight: 900; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+.clip { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+.media { object-fit: cover; }
+.freezetint { z-index: 5; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,.55) 100%); }
+.card { z-index: 30; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.cardline { font-family: "Mont", sans-serif; font-weight: 900; color: #fff; text-transform: uppercase; font-size: 120px;
+  letter-spacing: -0.02em; text-align: center; line-height: 1; }
+.cardline.l1 { font-size: 76px; color: #FFD400; }
+.cardline.l2 { font-size: 56px; color: #ccc; }
+.meme { z-index: 40; display: flex; justify-content: center; pointer-events: none; }
+.meme span { display: inline-block; font-family: "Anton", "Emoji", sans-serif; color: #fff; text-transform: uppercase;
+  font-size: 104px; line-height: 1.02; text-align: center; max-width: 1700px;
+  -webkit-text-stroke: 7px #000; paint-order: stroke fill; text-shadow: 0 6px 0 #000; }
+.meme.top { align-items: flex-start; padding-top: 40px; }
+.meme.bottom { align-items: flex-end; padding-bottom: 150px; }
+.meme.mid { align-items: center; }
+.meme.small { align-items: flex-start; padding-top: 40px; }
+.meme.small span { font-size: 64px; -webkit-text-stroke: 5px #000; }
+.meme.yellow span { color: #FFD400; }
+.emoji { z-index: 45; }
+.emoji span { position: absolute; font-size: 220px; line-height: 1; transform-origin: 50% 50%;
+  font-family: "Emoji", sans-serif; margin-left: -110px; margin-top: -110px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="478.9" data-width="1920" data-height="1080">
+<video id="v000" class="clip media" src="assets/clips/c_5d66eb495c.mp4" data-start="0.0" data-duration="8.0" data-media-start="0" muted playsinline></video>
+<video id="v001" class="clip media" src="assets/clips/c_73ae4c36a6.mp4" data-start="8.0" data-duration="3.6" data-media-start="0" muted playsinline></video>
+<video id="v002" class="clip media" src="assets/clips/c_bb576240e5.mp4" data-start="11.6" data-duration="0.7" data-media-start="0" muted playsinline></video>
+<img id="v003" class="clip media" src="assets/clips/f_cc72fee504.png" data-start="12.3" data-duration="2.2" style="transform-origin:50% 45%" />
+<div id="fz003" class="clip freezetint" data-start="12.3" data-duration="2.2"></div>
+<div id="t003_0" class="clip meme bottom" data-start="12.3000" data-duration="2.2"><span>HOW DID WE GET HERE?</span></div>
+<div id="e003_0" class="clip emoji" data-start="12.5000" data-duration="2.0"><span style="left:82%;top:30%">🤨</span></div>
+<div id="card004" class="clip card" data-start="14.5" data-duration="3.2" style="background:#000"><div class="cardline l0">THE COMEBACK</div><div class="cardline l1">DOWN 10 KILLS AT MINUTE 25</div><div class="cardline l2">we're dire btw</div></div>
+<div id="card005" class="clip card" data-start="17.7" data-duration="2.0" style="background:#000"><div class="cardline l0">PART 1</div><div class="cardline l1">GETTING FARMED</div></div>
+<video id="v006" class="clip media" src="assets/clips/c_a1a3d0c100.mp4" data-start="19.7" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t006_0" class="clip meme top" data-start="29.7000" data-duration="2.2"><span>IT'S JUST LANING BRO</span></div>
+<video id="v007" class="clip media" src="assets/clips/c_4e87e4c976.mp4" data-start="33.7" data-duration="13.0" data-media-start="0" muted playsinline></video>
+<div id="t007_0" class="clip meme small" data-start="43.0000" data-duration="2.5"><span>bro 💀</span></div>
+<div id="e007_0" class="clip emoji" data-start="43.1000" data-duration="1.8"><span style="left:80%;top:32%">💀</span></div>
+<video id="v008" class="clip media" src="assets/clips/c_791bc00952.mp4" data-start="46.7" data-duration="11.0" data-media-start="0" muted playsinline></video>
+<div id="e008_0" class="clip emoji" data-start="53.8000" data-duration="1.5"><span style="left:20%;top:30%">😭</span></div>
+<video id="v009" class="clip media" src="assets/clips/c_ee22f03c18.mp4" data-start="57.7" data-duration="12.0" data-media-start="0" muted playsinline></video>
+<div id="t009_0" class="clip meme top" data-start="65.7000" data-duration="2.2"><span>WHAT IS HAPPENING</span></div>
+<video id="v010" class="clip media" src="assets/clips/c_4b7cf9efcd.mp4" data-start="69.7" data-duration="20.0" data-media-start="0" muted playsinline></video>
+<div id="t010_0" class="clip meme small" data-start="79.7000" data-duration="2"><span>MINUTE 14</span></div>
+<div id="t010_1" class="clip meme bottom" data-start="85.9000" data-duration="3"><span>3 DEATHS IN 15 SECONDS</span></div>
+<img id="v011" class="clip media" src="assets/clips/f_18c88efc79.png" data-start="89.7" data-duration="1.6" style="transform-origin:50% 45%" />
+<div id="fz011" class="clip freezetint" data-start="89.7" data-duration="1.6"></div>
+<div id="t011_0" class="clip meme mid" data-start="89.7000" data-duration="1.6"><span>R 12 — D ???</span></div>
+<div id="e011_0" class="clip emoji" data-start="89.9000" data-duration="1.4"><span style="left:78%;top:30%">📉</span></div>
+<video id="v012" class="clip media" src="assets/clips/c_8f2d5a9228.mp4" data-start="91.3" data-duration="12.0" data-media-start="0" muted playsinline></video>
+<div id="e012_0" class="clip emoji" data-start="99.3000" data-duration="1.6"><span style="left:50%;top:30%">💀</span></div>
+<video id="v013" class="clip media" src="assets/clips/c_5d3603ae1b.mp4" data-start="103.3" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t013_0" class="clip meme small" data-start="113.3000" data-duration="2.5"><span>we got caught. again.</span></div>
+<video id="v014" class="clip media" src="assets/clips/c_ff3c517f07.mp4" data-start="117.3" data-duration="12.0" data-media-start="0" muted playsinline></video>
+<div id="e014_0" class="clip emoji" data-start="125.4000" data-duration="1.6"><span style="left:82%;top:30%">🗿</span></div>
+<video id="v015" class="clip media" src="assets/clips/c_81faeaef29.mp4" data-start="129.3" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t015_0" class="clip meme top" data-start="139.3000" data-duration="2.5"><span>WAIT WE GOT KILLS?</span></div>
+<div id="e015_0" class="clip emoji" data-start="139.5000" data-duration="1.6"><span style="left:20%;top:30%">😳</span></div>
+<video id="v016" class="clip media" src="assets/clips/c_9395312787.mp4" data-start="143.3" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t016_0" class="clip meme bottom" data-start="153.3000" data-duration="2.0"><span>nvm</span></div>
+<video id="v017" class="clip media" src="assets/clips/c_e9743dfc81.mp4" data-start="157.3" data-duration="15.0" data-media-start="0" muted playsinline></video>
+<video id="v018" class="clip media" src="assets/clips/c_82ec299cd0.mp4" data-start="172.3" data-duration="3.6" data-media-start="0" muted playsinline></video>
+<video id="v019" class="clip media" src="assets/clips/c_fdbab46c93.mp4" data-start="175.9" data-duration="3.2" data-media-start="0" muted playsinline></video>
+<img id="v020" class="clip media" src="assets/clips/f_8265c5b0e6.png" data-start="179.1" data-duration="2.0" style="transform-origin:50% 45%" />
+<div id="fz020" class="clip freezetint" data-start="179.1" data-duration="2.0"></div>
+<div id="t020_0" class="clip meme mid" data-start="179.1000" data-duration="2.0"><span>IT'S OVER.</span></div>
+<div id="e020_0" class="clip emoji" data-start="179.3000" data-duration="1.8"><span style="left:80%;top:30%">💀</span></div>
+<div id="card021" class="clip card" data-start="181.1" data-duration="3.0" style="background:#000"><div class="cardline l0">MINUTE 25</div><div class="cardline l1">RADIANT 25 — DIRE 15</div><div class="cardline l2">surely it's over</div></div>
+<div id="card022" class="clip card" data-start="184.1" data-duration="1.6" style="background:#100000"><div class="cardline l0">...OR IS IT?</div></div>
+<div id="card023" class="clip card" data-start="185.7" data-duration="2.0" style="background:#000"><div class="cardline l0">PART 2</div><div class="cardline l1">THE TURN</div></div>
+<video id="v024" class="clip media" src="assets/clips/c_b91579fb82.mp4" data-start="187.7" data-duration="13.0" data-media-start="0" muted playsinline></video>
+<video id="v025" class="clip media" src="assets/clips/c_2a7b96b27c.mp4" data-start="200.7" data-duration="3.6" data-media-start="0" muted playsinline></video>
+<video id="v026" class="clip media" src="assets/clips/c_ac5489bca3.mp4" data-start="204.3" data-duration="3.2" data-media-start="0" muted playsinline></video>
+<img id="v027" class="clip media" src="assets/clips/f_95778edf07.png" data-start="207.5" data-duration="1.8" style="transform-origin:50% 45%" />
+<div id="fz027" class="clip freezetint" data-start="207.5" data-duration="1.8"></div>
+<div id="t027_0" class="clip meme bottom" data-start="207.5000" data-duration="1.8"><span>DOUBLE KILL?!</span></div>
+<div id="e027_0" class="clip emoji" data-start="207.7000" data-duration="1.6"><span style="left:80%;top:30%">😳</span></div>
+<video id="v028" class="clip media" src="assets/clips/c_5cd45df797.mp4" data-start="209.3" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t028_0" class="clip meme small" data-start="219.3000" data-duration="2.2"><span>R 25 — D 19</span></div>
+<video id="v029" class="clip media" src="assets/clips/c_3be521e8ed.mp4" data-start="223.3" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t029_0" class="clip meme small" data-start="233.5000" data-duration="2.5"><span>the gap is closing 👀</span></div>
+<video id="v030" class="clip media" src="assets/clips/c_234ef54657.mp4" data-start="237.3" data-duration="25.0" data-media-start="0" muted playsinline></video>
+<div id="t030_0" class="clip meme top" data-start="257.3000" data-duration="2.5"><span>TEAMFIGHT</span></div>
+<div id="e030_0" class="clip emoji" data-start="257.7000" data-duration="1.6"><span style="left:80%;top:30%">🔥</span></div>
+<video id="v031" class="clip media" src="assets/clips/c_a4d6d3a484.mp4" data-start="262.3" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t031_0" class="clip meme small" data-start="272.3000" data-duration="2.5"><span>R 27 — D 24</span></div>
+<video id="v032" class="clip media" src="assets/clips/c_4f5681a1c4.mp4" data-start="276.3" data-duration="20.0" data-media-start="0" muted playsinline></video>
+<div id="t032_0" class="clip meme small" data-start="283.3000" data-duration="2"><span>MINUTE 34</span></div>
+<div id="t032_1" class="clip meme bottom" data-start="292.5000" data-duration="2.5"><span>two for us</span></div>
+<video id="v033" class="clip media" src="assets/clips/c_4abb06285e.mp4" data-start="296.3" data-duration="11.0" data-media-start="0" muted playsinline></video>
+<video id="v034" class="clip media" src="assets/clips/c_6b0f99e4fb.mp4" data-start="307.3" data-duration="3.6" data-media-start="0" muted playsinline></video>
+<video id="v035" class="clip media" src="assets/clips/c_4a95e77b06.mp4" data-start="310.9" data-duration="3.2" data-media-start="0" muted playsinline></video>
+<img id="v036" class="clip media" src="assets/clips/f_39b2b4d687.png" data-start="314.1" data-duration="1.8" style="transform-origin:50% 45%" />
+<div id="fz036" class="clip freezetint" data-start="314.1" data-duration="1.8"></div>
+<div id="t036_0" class="clip meme bottom" data-start="314.1000" data-duration="1.8"><span>DOUBLE KILL 🗿</span></div>
+<video id="v037" class="clip media" src="assets/clips/c_e306015575.mp4" data-start="315.9" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t037_0" class="clip meme small" data-start="325.9000" data-duration="2.5"><span>R 31 — D 29</span></div>
+<div id="e037_0" class="clip emoji" data-start="326.2000" data-duration="1.6"><span style="left:80%;top:30%">👀</span></div>
+<div id="card038" class="clip card" data-start="329.9" data-duration="2.0" style="background:#000"><div class="cardline l0">MINUTE 40</div><div class="cardline l1">ONE FIGHT AWAY</div></div>
+<video id="v039" class="clip media" src="assets/clips/c_bfd58b4a50.mp4" data-start="331.9" data-duration="17.0" data-media-start="0" muted playsinline></video>
+<video id="v040" class="clip media" src="assets/clips/c_cd34e86fd2.mp4" data-start="348.9" data-duration="3.6" data-media-start="0" muted playsinline></video>
+<video id="v041" class="clip media" src="assets/clips/c_5e20c0649c.mp4" data-start="352.5" data-duration="3.2" data-media-start="0" muted playsinline></video>
+<img id="v042" class="clip media" src="assets/clips/f_21efb79699.png" data-start="355.7" data-duration="2.4" style="transform-origin:50% 45%" />
+<div id="fz042" class="clip freezetint" data-start="355.7" data-duration="2.4"></div>
+<div id="t042_0" class="clip meme bottom" data-start="355.7000" data-duration="2.4"><span>WE'RE AHEAD???</span></div>
+<div id="e042_0" class="clip emoji" data-start="355.9000" data-duration="2.2"><span style="left:80%;top:30%">😭</span></div>
+<div id="card043" class="clip card" data-start="358.1" data-duration="2.0" style="background:#000"><div class="cardline l0">PART 3</div><div class="cardline l1">END IT</div></div>
+<video id="v044" class="clip media" src="assets/clips/c_5ead833718.mp4" data-start="360.1" data-duration="14.0" data-media-start="0" muted playsinline></video>
+<div id="t044_0" class="clip meme small" data-start="370.1000" data-duration="2"><span>they're not done yet</span></div>
+<video id="v045" class="clip media" src="assets/clips/c_8bdd42796d.mp4" data-start="374.1" data-duration="26.0" data-media-start="0" muted playsinline></video>
+<div id="t045_0" class="clip meme small" data-start="384.1000" data-duration="2.2"><span>MINUTE 44</span></div>
+<div id="t045_1" class="clip meme bottom" data-start="396.3000" data-duration="2.5"><span>R 33 — D 35</span></div>
+<div id="e045_0" class="clip emoji" data-start="396.4000" data-duration="1.6"><span style="left:80%;top:30%">🔥</span></div>
+<video id="v046" class="clip media" src="assets/clips/c_0e838bd81a.mp4" data-start="400.1" data-duration="9.0" data-media-start="0" muted playsinline></video>
+<video id="v047" class="clip media" src="assets/clips/c_73ae4c36a6.mp4" data-start="409.1" data-duration="3.6" data-media-start="0" muted playsinline></video>
+<video id="v048" class="clip media" src="assets/clips/c_57ca5a2215.mp4" data-start="412.7" data-duration="2.2" data-media-start="0" muted playsinline></video>
+<img id="v049" class="clip media" src="assets/clips/f_4af27b3390.png" data-start="414.9" data-duration="2.0" style="transform-origin:50% 45%" />
+<div id="fz049" class="clip freezetint" data-start="414.9" data-duration="2.0"></div>
+<div id="t049_0" class="clip meme mid" data-start="414.9000" data-duration="2.0"><span>3 FOR 0</span></div>
+<div id="e049_0" class="clip emoji" data-start="415.1000" data-duration="1.8"><span style="left:80%;top:30%">🗿</span></div>
+<video id="v050" class="clip media" src="assets/clips/c_28809cba54.mp4" data-start="416.9" data-duration="25.0" data-media-start="0" muted playsinline></video>
+<div id="t050_0" class="clip meme top" data-start="419.9000" data-duration="2.5"><span>PUSH. PUSH. PUSH.</span></div>
+<video id="v051" class="clip media" src="assets/clips/c_073eb5e9bd.mp4" data-start="441.9" data-duration="17.0" data-media-start="0" muted playsinline></video>
+<div id="t051_0" class="clip meme small" data-start="443.9000" data-duration="2.5"><span>R 34 — D 40</span></div>
+<video id="v052" class="clip media" src="assets/clips/c_7d349462ff.mp4" data-start="458.9" data-duration="16.0" data-media-start="0" muted playsinline></video>
+<div id="e052_0" class="clip emoji" data-start="460.1000" data-duration="3"><span style="left:85%;top:70%">🏆</span></div>
+<div id="card053" class="clip card" data-start="474.9" data-duration="4.0" style="background:#000"><div class="cardline l0">GG</div><div class="cardline l1">FROM 10 KILLS DOWN TO DIRE VICTORY</div><div class="cardline l2">like if you'd have alt+f4'd at minute 25</div></div>
+<audio id="mix" src="assets/mix.wav" data-start="0" data-duration="478.9" data-has-audio="true"></audio>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.set("#v000",{transformOrigin:"50% 42%"},6.8000);
+tl.to("#v000",{scale:1.35,duration:0.5,ease:"power3.out"},6.8000);
+tl.set("#v001",{transformOrigin:"50% 42%"},8.0000);
+tl.to("#v001",{scale:1.5,duration:0.3,ease:"power3.out"},8.0000);
+tl.to("#v001",{x:9,y:-6,duration:0.0437,ease:"none"},10.0000);
+tl.to("#v001",{x:-8,y:5,duration:0.0437,ease:"none"},10.0437);
+tl.to("#v001",{x:6,y:8,duration:0.0437,ease:"none"},10.0875);
+tl.to("#v001",{x:-5,y:-7,duration:0.0437,ease:"none"},10.1312);
+tl.to("#v001",{x:7,y:-4,duration:0.0437,ease:"none"},10.1750);
+tl.to("#v001",{x:-9,y:3,duration:0.0437,ease:"none"},10.2188);
+tl.to("#v001",{x:4,y:6,duration:0.0437,ease:"none"},10.2625);
+tl.to("#v001",{x:0,y:0,duration:0.0437,ease:"none"},10.3063);
+tl.fromTo("#v003",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},12.3);
+tl.to("#v003",{scale:1.325,duration:2.080,ease:"none"},12.4200);
+tl.fromTo("#t003_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},12.3000);
+tl.fromTo("#e003_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},12.5000);
+tl.fromTo("#card004 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},14.5);
+tl.fromTo("#card005 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},17.7);
+tl.set("#v006",{transformOrigin:"50% 42%"},28.3000);
+tl.to("#v006",{scale:1.35,duration:0.45,ease:"power3.out"},28.3000);
+tl.set("#v006",{transformOrigin:"50% 50%"},30.9000);
+tl.to("#v006",{scale:1.0,duration:0.6,ease:"power3.out"},30.9000);
+tl.to("#v006",{x:9,y:-6,duration:0.0437,ease:"none"},29.5000);
+tl.to("#v006",{x:-8,y:5,duration:0.0437,ease:"none"},29.5437);
+tl.to("#v006",{x:6,y:8,duration:0.0437,ease:"none"},29.5875);
+tl.to("#v006",{x:-5,y:-7,duration:0.0437,ease:"none"},29.6313);
+tl.to("#v006",{x:7,y:-4,duration:0.0437,ease:"none"},29.6750);
+tl.to("#v006",{x:-9,y:3,duration:0.0437,ease:"none"},29.7188);
+tl.to("#v006",{x:4,y:6,duration:0.0437,ease:"none"},29.7625);
+tl.to("#v006",{x:0,y:0,duration:0.0437,ease:"none"},29.8062);
+tl.fromTo("#t006_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},29.7000);
+tl.set("#v007",{transformOrigin:"50% 42%"},41.3000);
+tl.to("#v007",{scale:1.35,duration:0.45,ease:"power3.out"},41.3000);
+tl.set("#v007",{transformOrigin:"50% 50%"},43.9000);
+tl.to("#v007",{scale:1.0,duration:0.6,ease:"power3.out"},43.9000);
+tl.to("#v007",{x:9,y:-6,duration:0.0437,ease:"none"},42.5000);
+tl.to("#v007",{x:-8,y:5,duration:0.0437,ease:"none"},42.5438);
+tl.to("#v007",{x:6,y:8,duration:0.0437,ease:"none"},42.5875);
+tl.to("#v007",{x:-5,y:-7,duration:0.0437,ease:"none"},42.6313);
+tl.to("#v007",{x:7,y:-4,duration:0.0437,ease:"none"},42.6750);
+tl.to("#v007",{x:-9,y:3,duration:0.0437,ease:"none"},42.7188);
+tl.to("#v007",{x:4,y:6,duration:0.0437,ease:"none"},42.7625);
+tl.to("#v007",{x:0,y:0,duration:0.0437,ease:"none"},42.8062);
+tl.fromTo("#t007_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},43.0000);
+tl.fromTo("#e007_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},43.1000);
+tl.set("#v008",{transformOrigin:"50% 42%"},52.3000);
+tl.to("#v008",{scale:1.35,duration:0.45,ease:"power3.out"},52.3000);
+tl.set("#v008",{transformOrigin:"50% 50%"},54.9000);
+tl.to("#v008",{scale:1.0,duration:0.6,ease:"power3.out"},54.9000);
+tl.to("#v008",{x:9,y:-6,duration:0.0437,ease:"none"},53.5000);
+tl.to("#v008",{x:-8,y:5,duration:0.0437,ease:"none"},53.5438);
+tl.to("#v008",{x:6,y:8,duration:0.0437,ease:"none"},53.5875);
+tl.to("#v008",{x:-5,y:-7,duration:0.0437,ease:"none"},53.6313);
+tl.to("#v008",{x:7,y:-4,duration:0.0437,ease:"none"},53.6750);
+tl.to("#v008",{x:-9,y:3,duration:0.0437,ease:"none"},53.7188);
+tl.to("#v008",{x:4,y:6,duration:0.0437,ease:"none"},53.7625);
+tl.to("#v008",{x:0,y:0,duration:0.0437,ease:"none"},53.8062);
+tl.fromTo("#e008_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},53.8000);
+tl.set("#v009",{transformOrigin:"50% 42%"},64.3000);
+tl.to("#v009",{scale:1.35,duration:0.45,ease:"power3.out"},64.3000);
+tl.set("#v009",{transformOrigin:"50% 50%"},66.9000);
+tl.to("#v009",{scale:1.0,duration:0.6,ease:"power3.out"},66.9000);
+tl.to("#v009",{x:9,y:-6,duration:0.0437,ease:"none"},65.5000);
+tl.to("#v009",{x:-8,y:5,duration:0.0437,ease:"none"},65.5438);
+tl.to("#v009",{x:6,y:8,duration:0.0437,ease:"none"},65.5875);
+tl.to("#v009",{x:-5,y:-7,duration:0.0437,ease:"none"},65.6312);
+tl.to("#v009",{x:7,y:-4,duration:0.0437,ease:"none"},65.6750);
+tl.to("#v009",{x:-9,y:3,duration:0.0437,ease:"none"},65.7188);
+tl.to("#v009",{x:4,y:6,duration:0.0437,ease:"none"},65.7625);
+tl.to("#v009",{x:0,y:0,duration:0.0437,ease:"none"},65.8063);
+tl.fromTo("#t009_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},65.7000);
+tl.set("#v010",{transformOrigin:"50% 42%"},84.3000);
+tl.to("#v010",{scale:1.35,duration:0.45,ease:"power3.out"},84.3000);
+tl.set("#v010",{transformOrigin:"50% 50%"},86.9000);
+tl.to("#v010",{scale:1.0,duration:0.6,ease:"power3.out"},86.9000);
+tl.to("#v010",{x:9,y:-6,duration:0.0437,ease:"none"},85.5000);
+tl.to("#v010",{x:-8,y:5,duration:0.0437,ease:"none"},85.5438);
+tl.to("#v010",{x:6,y:8,duration:0.0437,ease:"none"},85.5875);
+tl.to("#v010",{x:-5,y:-7,duration:0.0437,ease:"none"},85.6312);
+tl.to("#v010",{x:7,y:-4,duration:0.0437,ease:"none"},85.6750);
+tl.to("#v010",{x:-9,y:3,duration:0.0437,ease:"none"},85.7188);
+tl.to("#v010",{x:4,y:6,duration:0.0437,ease:"none"},85.7625);
+tl.to("#v010",{x:0,y:0,duration:0.0437,ease:"none"},85.8063);
+tl.fromTo("#t010_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},79.7000);
+tl.fromTo("#t010_1 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},85.9000);
+tl.fromTo("#v011",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},89.7);
+tl.to("#v011",{scale:1.325,duration:1.480,ease:"none"},89.8200);
+tl.fromTo("#t011_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},89.7000);
+tl.fromTo("#e011_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},89.9000);
+tl.set("#v012",{transformOrigin:"50% 42%"},97.9000);
+tl.to("#v012",{scale:1.35,duration:0.45,ease:"power3.out"},97.9000);
+tl.set("#v012",{transformOrigin:"50% 50%"},100.5000);
+tl.to("#v012",{scale:1.0,duration:0.6,ease:"power3.out"},100.5000);
+tl.to("#v012",{x:9,y:-6,duration:0.0437,ease:"none"},99.1000);
+tl.to("#v012",{x:-8,y:5,duration:0.0437,ease:"none"},99.1437);
+tl.to("#v012",{x:6,y:8,duration:0.0437,ease:"none"},99.1875);
+tl.to("#v012",{x:-5,y:-7,duration:0.0437,ease:"none"},99.2312);
+tl.to("#v012",{x:7,y:-4,duration:0.0437,ease:"none"},99.2750);
+tl.to("#v012",{x:-9,y:3,duration:0.0437,ease:"none"},99.3187);
+tl.to("#v012",{x:4,y:6,duration:0.0437,ease:"none"},99.3625);
+tl.to("#v012",{x:0,y:0,duration:0.0437,ease:"none"},99.4062);
+tl.fromTo("#e012_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},99.3000);
+tl.set("#v013",{transformOrigin:"50% 42%"},111.9000);
+tl.to("#v013",{scale:1.35,duration:0.45,ease:"power3.out"},111.9000);
+tl.set("#v013",{transformOrigin:"50% 50%"},114.5000);
+tl.to("#v013",{scale:1.0,duration:0.6,ease:"power3.out"},114.5000);
+tl.to("#v013",{x:9,y:-6,duration:0.0437,ease:"none"},113.1000);
+tl.to("#v013",{x:-8,y:5,duration:0.0437,ease:"none"},113.1437);
+tl.to("#v013",{x:6,y:8,duration:0.0437,ease:"none"},113.1875);
+tl.to("#v013",{x:-5,y:-7,duration:0.0437,ease:"none"},113.2312);
+tl.to("#v013",{x:7,y:-4,duration:0.0437,ease:"none"},113.2750);
+tl.to("#v013",{x:-9,y:3,duration:0.0437,ease:"none"},113.3187);
+tl.to("#v013",{x:4,y:6,duration:0.0437,ease:"none"},113.3625);
+tl.to("#v013",{x:0,y:0,duration:0.0437,ease:"none"},113.4062);
+tl.fromTo("#t013_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},113.3000);
+tl.set("#v014",{transformOrigin:"50% 42%"},123.9000);
+tl.to("#v014",{scale:1.35,duration:0.45,ease:"power3.out"},123.9000);
+tl.set("#v014",{transformOrigin:"50% 50%"},126.5000);
+tl.to("#v014",{scale:1.0,duration:0.6,ease:"power3.out"},126.5000);
+tl.to("#v014",{x:9,y:-6,duration:0.0437,ease:"none"},125.1000);
+tl.to("#v014",{x:-8,y:5,duration:0.0437,ease:"none"},125.1437);
+tl.to("#v014",{x:6,y:8,duration:0.0437,ease:"none"},125.1875);
+tl.to("#v014",{x:-5,y:-7,duration:0.0437,ease:"none"},125.2312);
+tl.to("#v014",{x:7,y:-4,duration:0.0437,ease:"none"},125.2750);
+tl.to("#v014",{x:-9,y:3,duration:0.0437,ease:"none"},125.3187);
+tl.to("#v014",{x:4,y:6,duration:0.0437,ease:"none"},125.3625);
+tl.to("#v014",{x:0,y:0,duration:0.0437,ease:"none"},125.4062);
+tl.fromTo("#e014_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},125.4000);
+tl.set("#v015",{transformOrigin:"50% 42%"},137.9000);
+tl.to("#v015",{scale:1.35,duration:0.45,ease:"power3.out"},137.9000);
+tl.set("#v015",{transformOrigin:"50% 50%"},140.5000);
+tl.to("#v015",{scale:1.0,duration:0.6,ease:"power3.out"},140.5000);
+tl.to("#v015",{x:9,y:-6,duration:0.0437,ease:"none"},139.1000);
+tl.to("#v015",{x:-8,y:5,duration:0.0437,ease:"none"},139.1438);
+tl.to("#v015",{x:6,y:8,duration:0.0437,ease:"none"},139.1875);
+tl.to("#v015",{x:-5,y:-7,duration:0.0437,ease:"none"},139.2313);
+tl.to("#v015",{x:7,y:-4,duration:0.0437,ease:"none"},139.2750);
+tl.to("#v015",{x:-9,y:3,duration:0.0437,ease:"none"},139.3188);
+tl.to("#v015",{x:4,y:6,duration:0.0437,ease:"none"},139.3625);
+tl.to("#v015",{x:0,y:0,duration:0.0437,ease:"none"},139.4063);
+tl.fromTo("#t015_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},139.3000);
+tl.fromTo("#e015_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},139.5000);
+tl.set("#v016",{transformOrigin:"50% 42%"},151.9000);
+tl.to("#v016",{scale:1.35,duration:0.45,ease:"power3.out"},151.9000);
+tl.set("#v016",{transformOrigin:"50% 50%"},154.5000);
+tl.to("#v016",{scale:1.0,duration:0.6,ease:"power3.out"},154.5000);
+tl.to("#v016",{x:9,y:-6,duration:0.0437,ease:"none"},153.1000);
+tl.to("#v016",{x:-8,y:5,duration:0.0437,ease:"none"},153.1438);
+tl.to("#v016",{x:6,y:8,duration:0.0437,ease:"none"},153.1875);
+tl.to("#v016",{x:-5,y:-7,duration:0.0437,ease:"none"},153.2313);
+tl.to("#v016",{x:7,y:-4,duration:0.0437,ease:"none"},153.2750);
+tl.to("#v016",{x:-9,y:3,duration:0.0437,ease:"none"},153.3188);
+tl.to("#v016",{x:4,y:6,duration:0.0437,ease:"none"},153.3625);
+tl.to("#v016",{x:0,y:0,duration:0.0437,ease:"none"},153.4063);
+tl.fromTo("#t016_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},153.3000);
+tl.set("#v017",{transformOrigin:"50% 42%"},171.1000);
+tl.to("#v017",{scale:1.35,duration:0.5,ease:"power3.out"},171.1000);
+tl.set("#v018",{transformOrigin:"50% 42%"},172.3000);
+tl.to("#v018",{scale:1.5,duration:0.3,ease:"power3.out"},172.3000);
+tl.to("#v018",{x:9,y:-6,duration:0.0437,ease:"none"},174.3000);
+tl.to("#v018",{x:-8,y:5,duration:0.0437,ease:"none"},174.3438);
+tl.to("#v018",{x:6,y:8,duration:0.0437,ease:"none"},174.3875);
+tl.to("#v018",{x:-5,y:-7,duration:0.0437,ease:"none"},174.4313);
+tl.to("#v018",{x:7,y:-4,duration:0.0437,ease:"none"},174.4750);
+tl.to("#v018",{x:-9,y:3,duration:0.0437,ease:"none"},174.5188);
+tl.to("#v018",{x:4,y:6,duration:0.0437,ease:"none"},174.5625);
+tl.to("#v018",{x:0,y:0,duration:0.0437,ease:"none"},174.6063);
+tl.fromTo("#v020",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},179.1);
+tl.to("#v020",{scale:1.325,duration:1.880,ease:"none"},179.2200);
+tl.fromTo("#t020_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},179.1000);
+tl.fromTo("#e020_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},179.3000);
+tl.fromTo("#card021 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},181.1);
+tl.fromTo("#card022 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},184.1);
+tl.fromTo("#card023 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},185.7);
+tl.set("#v024",{transformOrigin:"50% 42%"},199.5000);
+tl.to("#v024",{scale:1.35,duration:0.5,ease:"power3.out"},199.5000);
+tl.set("#v025",{transformOrigin:"50% 42%"},200.7000);
+tl.to("#v025",{scale:1.5,duration:0.3,ease:"power3.out"},200.7000);
+tl.to("#v025",{x:9,y:-6,duration:0.0437,ease:"none"},202.7000);
+tl.to("#v025",{x:-8,y:5,duration:0.0437,ease:"none"},202.7437);
+tl.to("#v025",{x:6,y:8,duration:0.0437,ease:"none"},202.7875);
+tl.to("#v025",{x:-5,y:-7,duration:0.0437,ease:"none"},202.8312);
+tl.to("#v025",{x:7,y:-4,duration:0.0437,ease:"none"},202.8750);
+tl.to("#v025",{x:-9,y:3,duration:0.0437,ease:"none"},202.9187);
+tl.to("#v025",{x:4,y:6,duration:0.0437,ease:"none"},202.9625);
+tl.to("#v025",{x:0,y:0,duration:0.0437,ease:"none"},203.0062);
+tl.fromTo("#v027",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},207.5);
+tl.to("#v027",{scale:1.325,duration:1.680,ease:"none"},207.6200);
+tl.fromTo("#t027_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},207.5000);
+tl.fromTo("#e027_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},207.7000);
+tl.set("#v028",{transformOrigin:"50% 42%"},217.9000);
+tl.to("#v028",{scale:1.35,duration:0.45,ease:"power3.out"},217.9000);
+tl.set("#v028",{transformOrigin:"50% 50%"},220.5000);
+tl.to("#v028",{scale:1.0,duration:0.6,ease:"power3.out"},220.5000);
+tl.to("#v028",{x:9,y:-6,duration:0.0437,ease:"none"},219.1000);
+tl.to("#v028",{x:-8,y:5,duration:0.0437,ease:"none"},219.1438);
+tl.to("#v028",{x:6,y:8,duration:0.0437,ease:"none"},219.1875);
+tl.to("#v028",{x:-5,y:-7,duration:0.0437,ease:"none"},219.2313);
+tl.to("#v028",{x:7,y:-4,duration:0.0437,ease:"none"},219.2750);
+tl.to("#v028",{x:-9,y:3,duration:0.0437,ease:"none"},219.3188);
+tl.to("#v028",{x:4,y:6,duration:0.0437,ease:"none"},219.3625);
+tl.to("#v028",{x:0,y:0,duration:0.0437,ease:"none"},219.4063);
+tl.fromTo("#t028_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},219.3000);
+tl.set("#v029",{transformOrigin:"50% 42%"},231.9000);
+tl.to("#v029",{scale:1.35,duration:0.45,ease:"power3.out"},231.9000);
+tl.set("#v029",{transformOrigin:"50% 50%"},234.5000);
+tl.to("#v029",{scale:1.0,duration:0.6,ease:"power3.out"},234.5000);
+tl.to("#v029",{x:9,y:-6,duration:0.0437,ease:"none"},233.1000);
+tl.to("#v029",{x:-8,y:5,duration:0.0437,ease:"none"},233.1438);
+tl.to("#v029",{x:6,y:8,duration:0.0437,ease:"none"},233.1875);
+tl.to("#v029",{x:-5,y:-7,duration:0.0437,ease:"none"},233.2313);
+tl.to("#v029",{x:7,y:-4,duration:0.0437,ease:"none"},233.2750);
+tl.to("#v029",{x:-9,y:3,duration:0.0437,ease:"none"},233.3188);
+tl.to("#v029",{x:4,y:6,duration:0.0437,ease:"none"},233.3625);
+tl.to("#v029",{x:0,y:0,duration:0.0437,ease:"none"},233.4063);
+tl.fromTo("#t029_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},233.5000);
+tl.set("#v030",{transformOrigin:"50% 42%"},255.9000);
+tl.to("#v030",{scale:1.35,duration:0.45,ease:"power3.out"},255.9000);
+tl.set("#v030",{transformOrigin:"50% 50%"},258.5000);
+tl.to("#v030",{scale:1.0,duration:0.6,ease:"power3.out"},258.5000);
+tl.to("#v030",{x:9,y:-6,duration:0.0437,ease:"none"},257.1000);
+tl.to("#v030",{x:-8,y:5,duration:0.0437,ease:"none"},257.1438);
+tl.to("#v030",{x:6,y:8,duration:0.0437,ease:"none"},257.1875);
+tl.to("#v030",{x:-5,y:-7,duration:0.0437,ease:"none"},257.2313);
+tl.to("#v030",{x:7,y:-4,duration:0.0437,ease:"none"},257.2750);
+tl.to("#v030",{x:-9,y:3,duration:0.0437,ease:"none"},257.3188);
+tl.to("#v030",{x:4,y:6,duration:0.0437,ease:"none"},257.3625);
+tl.to("#v030",{x:0,y:0,duration:0.0437,ease:"none"},257.4062);
+tl.fromTo("#t030_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},257.3000);
+tl.fromTo("#e030_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},257.7000);
+tl.set("#v031",{transformOrigin:"50% 42%"},270.9000);
+tl.to("#v031",{scale:1.35,duration:0.45,ease:"power3.out"},270.9000);
+tl.set("#v031",{transformOrigin:"50% 50%"},273.5000);
+tl.to("#v031",{scale:1.0,duration:0.6,ease:"power3.out"},273.5000);
+tl.to("#v031",{x:9,y:-6,duration:0.0437,ease:"none"},272.1000);
+tl.to("#v031",{x:-8,y:5,duration:0.0437,ease:"none"},272.1438);
+tl.to("#v031",{x:6,y:8,duration:0.0437,ease:"none"},272.1875);
+tl.to("#v031",{x:-5,y:-7,duration:0.0437,ease:"none"},272.2313);
+tl.to("#v031",{x:7,y:-4,duration:0.0437,ease:"none"},272.2750);
+tl.to("#v031",{x:-9,y:3,duration:0.0437,ease:"none"},272.3188);
+tl.to("#v031",{x:4,y:6,duration:0.0437,ease:"none"},272.3625);
+tl.to("#v031",{x:0,y:0,duration:0.0437,ease:"none"},272.4062);
+tl.fromTo("#t031_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},272.3000);
+tl.set("#v032",{transformOrigin:"50% 42%"},290.9000);
+tl.to("#v032",{scale:1.35,duration:0.45,ease:"power3.out"},290.9000);
+tl.set("#v032",{transformOrigin:"50% 50%"},293.5000);
+tl.to("#v032",{scale:1.0,duration:0.6,ease:"power3.out"},293.5000);
+tl.to("#v032",{x:9,y:-6,duration:0.0437,ease:"none"},292.1000);
+tl.to("#v032",{x:-8,y:5,duration:0.0437,ease:"none"},292.1438);
+tl.to("#v032",{x:6,y:8,duration:0.0437,ease:"none"},292.1875);
+tl.to("#v032",{x:-5,y:-7,duration:0.0437,ease:"none"},292.2313);
+tl.to("#v032",{x:7,y:-4,duration:0.0437,ease:"none"},292.2750);
+tl.to("#v032",{x:-9,y:3,duration:0.0437,ease:"none"},292.3188);
+tl.to("#v032",{x:4,y:6,duration:0.0437,ease:"none"},292.3625);
+tl.to("#v032",{x:0,y:0,duration:0.0437,ease:"none"},292.4062);
+tl.fromTo("#t032_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},283.3000);
+tl.fromTo("#t032_1 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},292.5000);
+tl.set("#v033",{transformOrigin:"50% 42%"},306.1000);
+tl.to("#v033",{scale:1.35,duration:0.5,ease:"power3.out"},306.1000);
+tl.set("#v034",{transformOrigin:"50% 42%"},307.3000);
+tl.to("#v034",{scale:1.5,duration:0.3,ease:"power3.out"},307.3000);
+tl.to("#v034",{x:9,y:-6,duration:0.0437,ease:"none"},309.3000);
+tl.to("#v034",{x:-8,y:5,duration:0.0437,ease:"none"},309.3438);
+tl.to("#v034",{x:6,y:8,duration:0.0437,ease:"none"},309.3875);
+tl.to("#v034",{x:-5,y:-7,duration:0.0437,ease:"none"},309.4313);
+tl.to("#v034",{x:7,y:-4,duration:0.0437,ease:"none"},309.4750);
+tl.to("#v034",{x:-9,y:3,duration:0.0437,ease:"none"},309.5188);
+tl.to("#v034",{x:4,y:6,duration:0.0437,ease:"none"},309.5625);
+tl.to("#v034",{x:0,y:0,duration:0.0437,ease:"none"},309.6062);
+tl.fromTo("#v036",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},314.1);
+tl.to("#v036",{scale:1.325,duration:1.680,ease:"none"},314.2200);
+tl.fromTo("#t036_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},314.1000);
+tl.set("#v037",{transformOrigin:"50% 42%"},324.5000);
+tl.to("#v037",{scale:1.35,duration:0.45,ease:"power3.out"},324.5000);
+tl.set("#v037",{transformOrigin:"50% 50%"},327.1000);
+tl.to("#v037",{scale:1.0,duration:0.6,ease:"power3.out"},327.1000);
+tl.to("#v037",{x:9,y:-6,duration:0.0437,ease:"none"},325.7000);
+tl.to("#v037",{x:-8,y:5,duration:0.0437,ease:"none"},325.7437);
+tl.to("#v037",{x:6,y:8,duration:0.0437,ease:"none"},325.7875);
+tl.to("#v037",{x:-5,y:-7,duration:0.0437,ease:"none"},325.8313);
+tl.to("#v037",{x:7,y:-4,duration:0.0437,ease:"none"},325.8750);
+tl.to("#v037",{x:-9,y:3,duration:0.0437,ease:"none"},325.9187);
+tl.to("#v037",{x:4,y:6,duration:0.0437,ease:"none"},325.9625);
+tl.to("#v037",{x:0,y:0,duration:0.0437,ease:"none"},326.0062);
+tl.fromTo("#t037_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},325.9000);
+tl.fromTo("#e037_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},326.2000);
+tl.fromTo("#card038 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},329.9);
+tl.set("#v039",{transformOrigin:"50% 42%"},347.7000);
+tl.to("#v039",{scale:1.35,duration:0.5,ease:"power3.out"},347.7000);
+tl.set("#v040",{transformOrigin:"50% 42%"},348.9000);
+tl.to("#v040",{scale:1.5,duration:0.3,ease:"power3.out"},348.9000);
+tl.to("#v040",{x:9,y:-6,duration:0.0437,ease:"none"},350.9000);
+tl.to("#v040",{x:-8,y:5,duration:0.0437,ease:"none"},350.9437);
+tl.to("#v040",{x:6,y:8,duration:0.0437,ease:"none"},350.9875);
+tl.to("#v040",{x:-5,y:-7,duration:0.0437,ease:"none"},351.0312);
+tl.to("#v040",{x:7,y:-4,duration:0.0437,ease:"none"},351.0750);
+tl.to("#v040",{x:-9,y:3,duration:0.0437,ease:"none"},351.1187);
+tl.to("#v040",{x:4,y:6,duration:0.0437,ease:"none"},351.1625);
+tl.to("#v040",{x:0,y:0,duration:0.0437,ease:"none"},351.2062);
+tl.fromTo("#v042",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},355.7);
+tl.to("#v042",{scale:1.325,duration:2.280,ease:"none"},355.8200);
+tl.fromTo("#t042_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},355.7000);
+tl.fromTo("#e042_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},355.9000);
+tl.fromTo("#card043 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},358.1);
+tl.set("#v044",{transformOrigin:"50% 42%"},368.7000);
+tl.to("#v044",{scale:1.35,duration:0.45,ease:"power3.out"},368.7000);
+tl.set("#v044",{transformOrigin:"50% 50%"},371.3000);
+tl.to("#v044",{scale:1.0,duration:0.6,ease:"power3.out"},371.3000);
+tl.to("#v044",{x:9,y:-6,duration:0.0437,ease:"none"},369.9000);
+tl.to("#v044",{x:-8,y:5,duration:0.0437,ease:"none"},369.9438);
+tl.to("#v044",{x:6,y:8,duration:0.0437,ease:"none"},369.9875);
+tl.to("#v044",{x:-5,y:-7,duration:0.0437,ease:"none"},370.0313);
+tl.to("#v044",{x:7,y:-4,duration:0.0437,ease:"none"},370.0750);
+tl.to("#v044",{x:-9,y:3,duration:0.0437,ease:"none"},370.1188);
+tl.to("#v044",{x:4,y:6,duration:0.0437,ease:"none"},370.1625);
+tl.to("#v044",{x:0,y:0,duration:0.0437,ease:"none"},370.2063);
+tl.fromTo("#t044_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},370.1000);
+tl.set("#v045",{transformOrigin:"50% 42%"},394.7000);
+tl.to("#v045",{scale:1.35,duration:0.45,ease:"power3.out"},394.7000);
+tl.set("#v045",{transformOrigin:"50% 50%"},397.3000);
+tl.to("#v045",{scale:1.0,duration:0.6,ease:"power3.out"},397.3000);
+tl.to("#v045",{x:9,y:-6,duration:0.0437,ease:"none"},395.9000);
+tl.to("#v045",{x:-8,y:5,duration:0.0437,ease:"none"},395.9438);
+tl.to("#v045",{x:6,y:8,duration:0.0437,ease:"none"},395.9875);
+tl.to("#v045",{x:-5,y:-7,duration:0.0437,ease:"none"},396.0313);
+tl.to("#v045",{x:7,y:-4,duration:0.0437,ease:"none"},396.0750);
+tl.to("#v045",{x:-9,y:3,duration:0.0437,ease:"none"},396.1188);
+tl.to("#v045",{x:4,y:6,duration:0.0437,ease:"none"},396.1625);
+tl.to("#v045",{x:0,y:0,duration:0.0437,ease:"none"},396.2063);
+tl.fromTo("#t045_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},384.1000);
+tl.fromTo("#t045_1 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},396.3000);
+tl.fromTo("#e045_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},396.4000);
+tl.set("#v046",{transformOrigin:"50% 42%"},407.9000);
+tl.to("#v046",{scale:1.35,duration:0.5,ease:"power3.out"},407.9000);
+tl.set("#v047",{transformOrigin:"50% 42%"},409.1000);
+tl.to("#v047",{scale:1.5,duration:0.3,ease:"power3.out"},409.1000);
+tl.to("#v047",{x:9,y:-6,duration:0.0437,ease:"none"},411.1000);
+tl.to("#v047",{x:-8,y:5,duration:0.0437,ease:"none"},411.1438);
+tl.to("#v047",{x:6,y:8,duration:0.0437,ease:"none"},411.1875);
+tl.to("#v047",{x:-5,y:-7,duration:0.0437,ease:"none"},411.2313);
+tl.to("#v047",{x:7,y:-4,duration:0.0437,ease:"none"},411.2750);
+tl.to("#v047",{x:-9,y:3,duration:0.0437,ease:"none"},411.3188);
+tl.to("#v047",{x:4,y:6,duration:0.0437,ease:"none"},411.3625);
+tl.to("#v047",{x:0,y:0,duration:0.0437,ease:"none"},411.4062);
+tl.fromTo("#v049",{scale:1},{scale:1.25,duration:0.12,ease:"power3.out"},414.9);
+tl.to("#v049",{scale:1.325,duration:1.880,ease:"none"},415.0200);
+tl.fromTo("#t049_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},414.9000);
+tl.fromTo("#e049_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},415.1000);
+tl.fromTo("#t050_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},419.9000);
+tl.set("#v051",{transformOrigin:"50% 40%"},455.9000);
+tl.to("#v051",{scale:1.3,duration:0.8,ease:"power3.out"},455.9000);
+tl.fromTo("#t051_0 span",{scale:1.8,rotation:-4},{scale:1,rotation:0,duration:0.16,ease:"back.out(2.5)"},443.9000);
+tl.set("#v052",{transformOrigin:"50% 35%"},458.9000);
+tl.to("#v052",{scale:1.2,duration:0.6,ease:"power3.out"},458.9000);
+tl.fromTo("#e052_0 span",{scale:0,rotation:-25},{scale:1,rotation:0,duration:0.22,ease:"back.out(3)"},460.1000);
+tl.fromTo("#card053 .cardline",{scale:1.6,opacity:0},{scale:1,opacity:1,duration:0.18,ease:"back.out(2)",stagger:0.12},474.9);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

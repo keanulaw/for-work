@@ -38,3 +38,4 @@ hyperframes/*/assets/clips/
 hyperframes/*/assets/*.wav
 hyperframes/*/.hyperframes/
 hyperframes/*/node_modules/
+hyperframes/*/assets/NotoColorEmoji.ttf

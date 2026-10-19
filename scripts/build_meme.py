@@ -15,7 +15,7 @@ Plan keys:
     {"card": ["LINE 1", "LINE 2"], "dur": 2, "sfx": [...], "bg": "#000"}
   Times inside an item are relative to the item's start on the output timeline.
 """
-import json, os, subprocess, sys
+import hashlib, json, os, subprocess, sys
 
 W, H, FPS = 1920, 1080, 30
 
@@ -49,9 +49,10 @@ def main(plan_path):
             a, b = it["clip"]
             sp = it.get("speed", 1)
             dur = round((b - a) / sp * FPS) / FPS
-            name = f"i{n:03d}.mp4"
             vf = f"setpts=PTS/{sp},fps={FPS},scale={W}:{H},format=yuv420p"
-            sh("ffmpeg", "-v", "error", "-y", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", src, "-vf", vf,
+            name = "c_" + hashlib.md5(f"{src}|{a}|{b}|{vf}".encode()).hexdigest()[:10] + ".mp4"
+            if not os.path.exists(os.path.join(cdir, name)):  # reuse cuts across rebuilds
+              sh("ffmpeg", "-v", "error", "-y", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", src, "-vf", vf,
                "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", os.path.join(cdir, name))
             atempo = f"atempo={sp}," if sp >= 0.5 else f"atempo=0.5,atempo={sp / 0.5},"
             gain = it.get("game_gain", 1)
@@ -61,8 +62,9 @@ def main(plan_path):
             it.update(file=name, dur=dur)
         elif "freeze" in it:
             dur = it.get("dur", 1.5)
-            name = f"i{n:03d}.png"
-            sh("ffmpeg", "-v", "error", "-y", "-ss", f"{it['freeze']:.3f}", "-i", src, "-frames:v", "1",
+            name = "f_" + hashlib.md5(f"{src}|{it['freeze']}".encode()).hexdigest()[:10] + ".png"
+            if not os.path.exists(os.path.join(cdir, name)):
+              sh("ffmpeg", "-v", "error", "-y", "-ss", f"{it['freeze']:.3f}", "-i", src, "-frames:v", "1",
                "-vf", f"scale={W}:{H}", os.path.join(cdir, name))
             add_audio_input(["-f", "lavfi", "-t", f"{dur:.3f}", "-i", "anullsrc=r=48000:cl=stereo"], "[{i}:a]anull[{o}]")
             it.update(file=name, dur=dur)
@@ -139,6 +141,7 @@ def main(plan_path):
 <script src="assets/gsap.min.js"></script>
 <style>
 @font-face {{ font-family: "Anton"; src: url("assets/anton-latin-400-normal.woff2") format("woff2"); }}
+@font-face {{ font-family: "Emoji"; src: url("assets/NotoColorEmoji.ttf") format("truetype"); }}
 @font-face {{ font-family: "Mont"; src: url("assets/montserrat-latin-900-normal.woff2") format("woff2"); font-weight: 900; }}
 * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #000; }}
@@ -152,7 +155,7 @@ html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #000; }
 .cardline.l1 {{ font-size: 76px; color: #FFD400; }}
 .cardline.l2 {{ font-size: 56px; color: #ccc; }}
 .meme {{ z-index: 40; display: flex; justify-content: center; pointer-events: none; }}
-.meme span {{ display: inline-block; font-family: "Anton", Impact, sans-serif; color: #fff; text-transform: uppercase;
+.meme span {{ display: inline-block; font-family: "Anton", "Emoji", sans-serif; color: #fff; text-transform: uppercase;
   font-size: 104px; line-height: 1.02; text-align: center; max-width: 1700px;
   -webkit-text-stroke: 7px #000; paint-order: stroke fill; text-shadow: 0 6px 0 #000; }}
 .meme.top {{ align-items: flex-start; padding-top: 40px; }}
@@ -163,7 +166,7 @@ html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #000; }
 .meme.yellow span {{ color: #FFD400; }}
 .emoji {{ z-index: 45; }}
 .emoji span {{ position: absolute; font-size: 220px; line-height: 1; transform-origin: 50% 50%;
-  font-family: "Noto Color Emoji", sans-serif; margin-left: -110px; margin-top: -110px; }}
+  font-family: "Emoji", sans-serif; margin-left: -110px; margin-top: -110px; }}
 </style>
 </head>
 <body>
